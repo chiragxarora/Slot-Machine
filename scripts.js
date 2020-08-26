@@ -3,6 +3,7 @@ let val1 = document.getElementById('val1');
 let val2 = document.getElementById('val2');
 let val3 = document.getElementById('val3');
 let lever = document.getElementById('lever');
+let result = document.getElementById('result');
 
 lever.onclick = () => {
     val1.classList.add('running');
@@ -19,9 +20,9 @@ lever.onclick = () => {
         val2.classList.remove('running');
         val3.classList.remove('running');
         if(val1.textContent === val2.textContent === val3.textContent){
-            alert("Congratulations");
+            result.textContent = "Result : Congratulations, YOU WON";
         }else{
-            alert("Try again");
+            result.textContent = "Result : Try Again, YOU COULDN'T WIN";
         }
     },2000);
 }
