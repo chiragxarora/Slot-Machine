@@ -6,6 +6,7 @@ let lever = document.getElementById('lever');
 let result = document.getElementById('result');
 
 lever.onclick = () => {
+    result.textContent = "Result : ";
     val1.classList.add('running');
     val2.classList.add('running');
     val3.classList.add('running');
@@ -19,7 +20,7 @@ lever.onclick = () => {
         val1.classList.remove('running');
         val2.classList.remove('running');
         val3.classList.remove('running');
-        if(val1.textContent === val2.textContent === val3.textContent){
+        if((val1.textContent === val2.textContent) &&(val2.textContent === val3.textContent) ){
             result.textContent = "Result : Congratulations, YOU WON";
         }else{
             result.textContent = "Result : Try Again, YOU COULDN'T WIN";
